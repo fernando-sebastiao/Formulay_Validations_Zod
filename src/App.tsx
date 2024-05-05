@@ -32,6 +32,7 @@ const createUserFormSchema = z.object({
       return email.endsWith("@rocketseat.com");
     }, "O email precisa ser da Rocketseat"),
   password: string().min(6, "A senha precisa no minímo 6 caracteres"),
+  //what is below is about fields array, is like one way to add more than one tasks
   techs: z
     .array(
       z.object({
